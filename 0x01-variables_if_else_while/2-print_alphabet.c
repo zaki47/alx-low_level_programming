@@ -5,11 +5,11 @@
  * Return: 0
  */
 
-char alpha = 'a';
-
 int main(void)
 {
-while (alpha <= 'z')
+char alpha = "a";
+
+	while (alpha <= 'z')
 	{
 	putchar(alpha);
 	alpha++;
