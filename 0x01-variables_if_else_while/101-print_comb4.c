@@ -21,8 +21,8 @@ int main(void)
 			putchar(n3 + 48);
 				if (n1 != 7 || n2 != 8 || n3 != 9)
 				{
-				putchar(',');
-				putchar(' ');
+					putchar(',');
+					putchar(' ');
 				}
 			}
 		}
