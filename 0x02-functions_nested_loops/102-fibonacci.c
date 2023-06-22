@@ -2,7 +2,7 @@
 
 /**
  * main - Prints first 50 Fibonacci num,
- *		starting with 1 and 2, separated by "," followed by "SP"
+ *		starting with 1 and 2, separated by "," followed by " "
  * Return: 0
  */
 
