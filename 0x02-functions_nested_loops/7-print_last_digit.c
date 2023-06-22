@@ -5,7 +5,6 @@
  * @n: int number
  * Return: the last dig
  */
- 
 int print_last_digit(int n)
 {
 	int m = n % 10;
