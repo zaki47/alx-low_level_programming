@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * print_alphabet_x10 - print alphabet  lowercase *10
+ * print_alphabet_x10 - print alphabet lowercase *10
  *
  * Return: 0
  */
@@ -12,7 +12,7 @@ void print_alphabet_x10(void)
 
 	for (i = 0; i < 10; i++)
 	{
-		int alpha;
+		char alpha;
 
 		for (alpha = 'a'; alpha <= 'z'; alpha++)
 		{
