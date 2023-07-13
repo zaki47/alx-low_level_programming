@@ -1,15 +1,12 @@
 #include "main.h"
-
 char *_strcpy(char *dest, char *src);
 char *_strcat(char *dest, char *src);
-
 /**
  * str_concat - function that concatenates two strings.
  * @s1: ptr to string.
  * @s2: ptr to str.
  * Return: str or NULL
 */
-
 char *str_concat(char *s1, char *s2)
 {
 	char *str;
@@ -37,7 +34,6 @@ char *str_concat(char *s1, char *s2)
  * @s: pointer to a string.
  * Return: lenght.
  */
-
 int _strlen(char *s)
 {
 	int lenght = 0;
@@ -49,7 +45,6 @@ int _strlen(char *s)
 	}
 	return (lenght);
 }
-
 /**
  * _strcpy - copys str to another
  * @dest: destination string
@@ -71,7 +66,6 @@ char *_strcpy(char *dest, char *src)
 
 	return (dest);
 }
-
 /**
  * _strcat - concatenate two strings
  *
@@ -79,7 +73,6 @@ char *_strcpy(char *dest, char *src)
  * @src: source srting
  * Return: dest
  */
-
 char *_strcat(char *dest, char *src)
 {
 	int i = 0;
