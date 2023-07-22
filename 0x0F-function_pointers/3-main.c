@@ -1,12 +1,10 @@
 #include "3-calc.h"
-
 /**
  * main - check the code
  *@argv: num of arguments.
  *@argc: argv.
  * Return: Always 0.
  */
-
 int main(int argc, char **argv)
 {
 	int (*op)(int, int);
