@@ -1,5 +1,4 @@
 #include "3-calc.h"
-
 /**
  * op_add - add
  * @a: int
