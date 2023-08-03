@@ -2,7 +2,6 @@
 
 /**
  * free_listint2 -  frees a listint_t list
- * 
  * @head: pointer to pointer to 1st node.
  */
 
