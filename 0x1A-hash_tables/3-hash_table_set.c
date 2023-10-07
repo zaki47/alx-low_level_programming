@@ -1,43 +1,44 @@
 #include "hash_tables.h"
 
-/**
- * _strdup - Duplicates a string in a newly allocated memory space.
+/*******
+ * _strdup - Duplicates a string in a newly allocated memo
  *
- * @s: The string to be duplicated.
+ * @s: The string to be duplicated
  *
  * Return: A pointer to the newly allocated duplicated string, or NULL
  *         if memory allocation fails or if @s is NULL.
  */
+
 char *_strdup(const char *s)
 {
 	int i;
-	char *new;
+	char* New;
 
 	i = 0;
 	while (s[i])
 		i++;
 	new = malloc(sizeof(char) * (i + 1));
-	if (!new)
+	if (!New)
 		return (0);
 	i = 0;
 	while (s[i])
 	{
-		new[i] = s[i];
+		New[i] = s[i];
 		i++;
 	}
-	new[i] = 0;
-	return (new);
+	New[i] = 0;
+	return (New);
 }
 
 /**
- * _strcmp - Compares two strings character by character.
+ * _strcmp - Compares two strings character by char
  *
- * @s1: The first string to compare.
- * @s2: The second string to compare.
+ * @s1: The 1st string to compare
+ * @s2: The 2nd string to compare
  *
  * Return: int
  */
-int _strcmp(char *s1, char *s2)
+int _strcmp(char* s1, char* s2)
 {
 	int i;
 
