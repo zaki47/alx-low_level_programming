@@ -7,7 +7,7 @@
  * Return: A pointer to the newly created hash table on success,
  *         or NULL if memory allocation fails.
  */
- 
+
 hash_table_t *hash_table_create(unsigned long int size)
 {
 	hash_table_t *hash_map = malloc(sizeof(hash_table_t));
