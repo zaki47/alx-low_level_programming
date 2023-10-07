@@ -11,20 +11,40 @@
  * in the hash table or if @ht or @key is NULL
  **/
 
-int hash_table_set(hash_table_t *ht, const char *key, const char *value);
+int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	unsigned long int key_idx;
-	hash_node_t *pair;
+	unsigned long int index = 0;
+	hash_node_t *node = NULL, *add_node = NULL, *tmp = NULL;
 
-	if (!ht || !key)
-		return (0);
-	key_idx = key_index((const unsigned char *)key, ht->size);
-	pair = ht->array[key_idx];
-	while (pair)
+	if (!key || !ht || !ht->array)
+		return (false);
+
+	index = key_index((unsigned char *)key, ht->size);
+	node = ht->array[index];
+
+	if (!node)
 	{
-		if (!strcmp(pair->key, (char *)key))
-			return (pair->value);
-		pair = pair->next;
+		node = malloc(sizeof(hash_node_t));
+		if (!node)
+			return (false);
+		node->key = strdup(key), node->value = strdup(value);
+		node->next = NULL;
+		ht->array[index] = node;
+		return (true);
 	}
-	return (0);
+
+	for (tmp = node; tmp; tmp = tmp->next)
+		if (strcmp(tmp->key, key) == 0)
+		{
+			free(tmp->value), tmp->value = strdup(value);
+			return (true);
+		}
+	add_node = malloc(sizeof(hash_node_t));
+	if (!add_node)
+		return (false);
+	add_node->key = strdup(key), add_node->value = strdup(value);
+	add_node->next = node;
+	ht->array[index] = add_node;
+
+	return (true);
 }
