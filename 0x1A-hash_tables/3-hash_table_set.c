@@ -11,7 +11,7 @@
  * in the hash table or if @ht or @key is NULL
  **/
 
-char *hash_table_get(const hash_table_t *ht, const char *key)
+int hash_table_set(hash_table_t *ht, const char *key, const char *value);
 {
 	unsigned long int key_idx;
 	hash_node_t *pair;
