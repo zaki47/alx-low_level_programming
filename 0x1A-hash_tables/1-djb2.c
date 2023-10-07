@@ -1,9 +1,9 @@
 #include "hash_tables.h"
 
 /**
- * hash_djb2 - implementation of the djb2 algorithm
+ * hash_djb2 - implementation of the djb2
  *
- * @str: string used to generate hash value
+ * @str: string used to generate hash
  *
  * Return: hash value
  */
@@ -16,8 +16,7 @@ unsigned long int hash_djb2(const unsigned char *str)
 	hash = 5381;
 	while ((c = *str++))
 	{
-		hash = (hash << 5);
-		hash += hash + c;
+		hash = ((hash << 5) + hash) + c;
 	}
 	return (hash);
 }
